@@ -6,8 +6,13 @@ import cv2
 
 EMPTY = True
 NOT_EMPTY = False
+import pickle
 
-MODEL = pickle.load(open("model.p", "rb"))
+try:
+    MODEL = pickle.load(open("model.p", "rb"))
+except FileNotFoundError:
+    MODEL = None
+    print("⚠️ Warning: model.p not found. Running in demo mode.")
 
 
 def empty_or_not(spot_bgr):
