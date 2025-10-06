@@ -7,9 +7,11 @@ import cv2
 EMPTY = True
 NOT_EMPTY = False
 
-MODEL = pickle.load(open("model.p", "rb"))
+if not os.path.exists(model_path):
+    # Thử đường dẫn khác
+    model_path = "parking-space-counter-master/model.p"
 
-
+MODEL = pickle.load(open(model_path, "rb"))
 def empty_or_not(spot_bgr):
 
     flat_data = []
