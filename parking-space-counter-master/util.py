@@ -1,4 +1,5 @@
 import pickle
+import os
 from skimage.transform import resize
 import numpy as np
 import cv2
