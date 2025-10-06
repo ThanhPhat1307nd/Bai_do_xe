@@ -1,6 +1,7 @@
-streamlit
-opencv-python-headless
-numpy
-matplotlib
-Pillow
-scikit-image
+matplotlib==3.6.2
+numpy==1.23.5
+opencv_contrib_python==4.11.0.86
+opencv_python==4.6.0.66
+opencv_python==4.11.0.86
+skimage==0.25.2
+streamlit==1.50.0
