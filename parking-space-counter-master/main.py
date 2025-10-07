@@ -9,7 +9,7 @@ st.title("🚗 Parking Spot Detection Demo")
 
 # ==== Đường dẫn video & mask ====
 mask_path = 'mask_1920_1080.png'
-video_path = 'C:/Users/ADMIN/Documents/Downloads/data-20251003T141721Z-1-001/data/parking_1920_1080_loop.mp4'
+video_path = 'https://github.com/ThanhPhat1307nd/parking-video-storage/releases/download/v1/parking_1920_1080_loop.mp4'
 
 # ==== Đọc dữ liệu ====
 mask = cv2.imread(mask_path, 0)
