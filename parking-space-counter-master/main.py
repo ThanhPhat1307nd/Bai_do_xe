@@ -23,7 +23,7 @@ diffs = [None for _ in spots]
 
 previous_frame = None
 frame_nmr = 0
-step = 240
+step = 15
 ret = True
 
 # ==== Placeholder hiển thị video và thông tin ====
