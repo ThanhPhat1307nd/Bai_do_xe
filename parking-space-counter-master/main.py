@@ -80,7 +80,7 @@ while ret and not stop:
 
     # 🔹 Hiển thị số chỗ trống ra ngoài (trên web, cập nhật realtime)
     info_placeholder.markdown(
-        f"### 🅿️ Vị trí trống hiện tại: **{empty_count} / {total_spots}**",
+        f"### 🅿️Số Vị trí trống hiện tại: **{empty_count} / {total_spots}**",
         unsafe_allow_html=True
     )
     frame_nmr += 1
