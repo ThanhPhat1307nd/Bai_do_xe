@@ -76,7 +76,7 @@ while ret and not stop:
 
     # ==== Hiển thị lên Streamlit ====
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    frame_placeholder.image(frame_rgb, channels="RGB", width = 960 )
+    frame_placeholder.image(frame_rgb, channels="RGB", width = 720 )
 
     # 🔹 Hiển thị số chỗ trống ra ngoài (trên web, cập nhật realtime)
     info_placeholder.markdown(
