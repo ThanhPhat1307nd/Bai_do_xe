@@ -8,8 +8,8 @@ st.set_page_config(page_title="Parking Detection", layout="wide")
 st.title("🚗 Parking Spot Detection Demo")
 
 # ==== Đường dẫn video & mask ====
-mask_path = 'mask_1920_1080.png'
-video_path = 'https://github.com/ThanhPhat1307nd/parking-video-storage/releases/download/v1/parking_1920_1080_loop.mp4'
+mask_path = 'mask_1920_1080_crop.png'
+video_path = 'https://github.com/ThanhPhat1307nd/parking-video-storage/releases/download/v1/parking_1920_1080_loop_cropcrop.mp4'
 
 # ==== Đọc dữ liệu ====
 mask = cv2.imread(mask_path, 0)
@@ -80,7 +80,7 @@ while ret and not stop:
 
     # 🔹 Hiển thị số chỗ trống ra ngoài (trên web, cập nhật realtime)
     info_placeholder.markdown(
-        f"### 🅿️ Vị trí trống hiện tại: **{empty_count} / {total_spots}**",
+        f"### 🅿️ Số vị trí trống hiện tại: **{empty_count} / {total_spots}**",
         unsafe_allow_html=True
     )
 
