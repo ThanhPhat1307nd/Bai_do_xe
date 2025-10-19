@@ -58,25 +58,7 @@ while ret and not stop:
             spot_status = empty_or_not(spot_crop)
             spots_status[spot_idx] = spot_status
 
-    if frame_nmr % step == 0:
-        previous_frame = frame.copy()
-
-    # ==== Vẽ khung chỗ đỗ xe ====
-    for spot_idx, (x1, y1, w, h) in enumerate(spots):
-        color = (0, 255, 0) if spots_status[spot_idx] else (0, 0, 255)
-        cv2.rectangle(frame, (x1, y1), (x1 + w, y1 + h), color, 2)
-
-    # ==== Thông tin số chỗ trống ====
-    empty_count = sum(spots_status)
-    total_spots = len(spots_status)
-
-    cv2.rectangle(frame, (80, 20), (550, 80), (0, 0, 0), -1)
-    cv2.putText(frame, f'Empty: {empty_count} / {total_spots}',
-                (100, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
-
-    # ==== Hiển thị lên Streamlit ====
-    frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    frame_placeholder.image(frame_rgb, channels="RGB", use_container_width=True)
+    if frame_nmr % step == 0960)
 
     # 🔹 Hiển thị số chỗ trống ra ngoài (trên web, cập nhật realtime)
     info_placeholder.markdown(
